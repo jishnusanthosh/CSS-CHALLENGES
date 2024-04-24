@@ -1,0 +1,39 @@
+.slider{
+    overflow: hidden;
+}
+
+.slider-track{
+    display: flex;
+    width: calc(2*400px);
+    animation: scroll 5s linear 1s infinite alternate;
+
+
+    
+}
+.slider-track:hover{
+    animation-play-state: paused;
+}
+.slide{
+    width: 800px;
+    height: 400px;
+    display: flex;
+    padding: 20px;
+    perspective: 100px;
+
+}
+.img {
+    width: 100%;
+    height: 400px;
+}
+img:hover{
+    transform: translateZ(15px);
+}
+
+@keyframes scroll {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-400px*2));
+    }
+}
